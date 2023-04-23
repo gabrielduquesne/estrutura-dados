@@ -1,30 +1,20 @@
 package br.eu.mavenproject4.newpackage;
 
 
+import java.util.Arrays;
+
 public class Bolha {
-  public static void main(String[] args) {
-        //bolha
-        int vetor[] = {6,3,5,1,2};
-        boolean controle;
-        int aux;
-
-        for(int i=0; i < vetor.length; i++){
-            controle=true;
-          for (int j=0; j < (vetor.length -1); ++j){
-
-              if(vetor[j] > vetor [j + 1]){
-                  aux = vetor[j];
-                  vetor[j] = vetor[j + 1];
-                  vetor[j + 1] = aux;
-                  controle=false;
+  public static void bubbleSort(int[] arr) {
+        for(int i=0; i < arr.length - 1; i++) {
+          for (int j=0; j < arr.length - 1; ++j) {
+              if(arr[j] > arr [j + 1]) {
+                  int aux = arr[j];
+                  arr[j] = arr[j + 1];
+                  arr[j + 1] = aux;
               }
-          } 
-          if(controle){
-              break;
           }
        }
-        for(int i = 0; i < vetor.length; i++){
-            System.out.print(vetor[i] + "");
-        }
+        
+        System.out.println(Arrays.toString(arr));
     }
 }
