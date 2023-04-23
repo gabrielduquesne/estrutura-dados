@@ -1,17 +1,14 @@
 package br.eu.mavenproject4.newpackage;
 
 
+import java.util.Arrays;
+
 public class Insertion {
-    public static void main(String[] args) {
+    public void insertionSort(int[] arr) {
         int[] vetor = new int[15];
         
         for(int i=0; i < vetor.length; i++){
             vetor[i] = (int) (Math.random() * vetor.length);
-        }
-
-        System.out.println("Desordenado");
-        for(int i=0; i < vetor.length; i++){
-            System.out.println(vetor[i]);
         }
 
         int aux, j;
@@ -25,11 +22,7 @@ public class Insertion {
             vetor[j+1] = aux;
         }
 
-        System.out.println("\n\nOrdenado");
-        for(int i=0; i < vetor.length; i++){
-            System.out.println(vetor[i]);
-        }
-
+        System.out.println(Arrays.toString(arr));
     }
 }
 
